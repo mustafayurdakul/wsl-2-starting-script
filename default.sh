@@ -59,11 +59,23 @@ sudo apt-get install -y gcc g++ make
 
 echo ""
 echo ""
-echo "## [UPDATE SCRIPT MESSAGE]:	Git SSH setup. "
-IFS= read -r -p  "Enter your GitHub e-mail address (example@github.com): " userEmail
-IFS= read -r -p  "Enter your GitHub Name (Mustafa Yurdakul): " userName
+echo "## [UPDATE SCRIPT MESSAGE]:	GitHub global configuration setup... "
+IFS = read -r -p  "Enter your GitHub e-mail address (example@github.com): " userEmail
+IFS = read -r -p  "Enter your GitHub Name (Mustafa Yurdakul): " userName
 git config --global user.name "$userName"
 git config --global user.email "$userEmail"
+
+
+echo ""
+echo ""
+echo "## [UPDATE SCRIPT MESSAGE]:	GitHub creating new SSH key."
+
+if [ -d "$HOME/.ssh/" ]
+then
+  echo "There is already SSH key in home directory."
+  echo "You can add this key to your GitHub account: "
+  cat ~/.ssh/id_ed25519.pub
+fi
 
 echo ""
 echo ""
