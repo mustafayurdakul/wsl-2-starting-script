@@ -59,4 +59,14 @@ sudo apt-get install -y gcc g++ make
 
 echo ""
 echo ""
+echo "## [UPDATE SCRIPT MESSAGE]:	Git SSH setup. "
+echo "Enter your GitHub e-mail address (example@github.com): "
+read userEmail
+echo "Enter your GitHub Name (Mustafa Yurdakul): "
+read userName
+git config --global user.name $userName
+git config --global user.email $userEmail
+
+echo ""
+echo ""
 echo "## [UPDATE SCRIPT MESSAGE]:	Finished."
