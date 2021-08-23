@@ -75,6 +75,11 @@ then
   echo "There is already SSH key in home directory."
   echo "You can add this key to your GitHub account: "
   cat ~/.ssh/id_ed25519.pub
+else 
+  echo "There is no SSH key in home directory."
+  echo "Creating SSH key..."
+  ssh-keygen -t ed25519 -C "$userEmail"
+  cat ~/.ssh/id_ed25519.pub
 fi
 
 echo ""
