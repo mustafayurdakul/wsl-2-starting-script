@@ -10,5 +10,6 @@ Bash script for update especially debian based distros and install zsh, git, nod
 ## Installing
 For execute, just copy and paste your default shell.
 ```bash
+sudo apt-get install curl
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mustafayurdakul/wsl-2-starting-script/main/default.sh)"
 ```
