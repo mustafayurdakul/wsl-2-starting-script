@@ -21,9 +21,9 @@ sudo apt-get install zsh -y
 echo ""
 echo ""
 echo "## [UPDATE SCRIPT MESSAGE]:	Changing default shell to Zsh.."
-[ $SHELL == /usr/bin/zsh ] && echo "Zsh is already default shell for that user."
-[ $SHELL != /usr/bin/zsh ] && echo "Current shell path is: " $SHELL", password may be need for changing to zsh."
-[ $SHELL != /usr/bin/zsh ] && chsh -s $(which zsh)
+[ $SHELL == /bin/zsh ] && echo "Zsh is already default shell for that user."
+[ $SHELL != /bin/zsh ] && echo "Current shell path is: " $SHELL", password may be need for changing to zsh."
+[ $SHELL != /bin/zsh ] && chsh -s $(which zsh)
 
 echo ""
 echo ""
@@ -64,8 +64,8 @@ echo "Enter your GitHub e-mail address (example@github.com): "
 read userEmail
 echo "Enter your GitHub Name (Mustafa Yurdakul): "
 read userName
-git config --global user.name $userName
-git config --global user.email $userEmail
+git config --global user.name "$userName"
+git config --global user.email "$userEmail"
 
 echo ""
 echo ""
