@@ -15,11 +15,6 @@ sudo apt-get install git -y
 
 echo ""
 echo ""
-echo "## [UPDATE SCRIPT MESSAGE]:	CURL installing..."
-sudo apt-get install curl -y
-
-echo ""
-echo ""
 echo "## [UPDATE SCRIPT MESSAGE]:	ZSH installing..."
 sudo apt-get install zsh -y
 
@@ -27,7 +22,7 @@ echo ""
 echo ""
 echo "## [UPDATE SCRIPT MESSAGE]:	Changing default shell to ZSH..."
 [ $SHELL == /usr/bin/zsh ] && echo "ZSH is already default shell for that user."
-[ $SHELL != /usr/bin/zsh ] && echo "Shell path is: " $SHELL ", password may be need for changing to zsh."
+[ $SHELL != /usr/bin/zsh ] && echo "Shell path is: " $SHELL", password may be need for changing to zsh."
 [ $SHELL != /usr/bin/zsh ] && chsh -s $(which zsh)
 
 echo ""
