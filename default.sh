@@ -60,8 +60,8 @@ sudo apt-get install -y gcc g++ make
 echo ""
 echo ""
 echo "## [UPDATE SCRIPT MESSAGE]:	GitHub global configuration setup... "
-IFS = read -r -p  "Enter your GitHub e-mail address (example@github.com): " userEmail
-IFS = read -r -p  "Enter your GitHub Name (Mustafa Yurdakul): " userName
+IFS= read -r -p  "Enter your GitHub e-mail address (example@github.com): " userEmail
+IFS= read -r -p  "Enter your GitHub Name (Mustafa Yurdakul): " userName
 git config --global user.name "$userName"
 git config --global user.email "$userEmail"
 
