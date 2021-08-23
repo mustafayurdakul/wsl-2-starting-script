@@ -21,9 +21,9 @@ sudo apt-get install zsh -y
 echo ""
 echo ""
 echo "## [UPDATE SCRIPT MESSAGE]:	Changing default shell to Zsh.."
-[ $SHELL == /bin/zsh ] && echo "Zsh is already default shell for that user."
-[ $SHELL != /bin/zsh ] && echo "Current shell path is: " $SHELL", password may be need for changing to zsh."
-[ $SHELL != /bin/zsh ] && chsh -s $(which zsh)
+[ $SHELL == /usr/bin/zsh ] && echo "Zsh is already default shell for that user."
+[ $SHELL != /usr/bin/zsh ] && echo "Current shell path is: " $SHELL", password may be need for changing to zsh."
+[ $SHELL != /usr/bin/zsh ] && chsh -s $(which zsh)
 
 echo ""
 echo ""
@@ -79,9 +79,6 @@ else
   echo "There is no SSH key in home directory."
   echo "Creating SSH key..."
   ssh-keygen -t ed25519 -C "$userEmail"
-  
-  echo ""
-  echo ""
   echo "SSH key created, you can add your SSH key from https://github.com/settings/keys. "
   cat ~/.ssh/id_ed25519.pub
 fi
