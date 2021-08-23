@@ -79,6 +79,10 @@ else
   echo "There is no SSH key in home directory."
   echo "Creating SSH key..."
   ssh-keygen -t ed25519 -C "$userEmail"
+  
+  echo ""
+  echo ""
+  echo "SSH key created, you can add your SSH key from https://github.com/settings/keys. "
   cat ~/.ssh/id_ed25519.pub
 fi
 
