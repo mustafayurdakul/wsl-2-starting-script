@@ -80,6 +80,7 @@ else
   echo "Creating SSH key..."
   ssh-keygen -t ed25519 -C "$userEmail"
   echo "SSH key created, you can add your SSH key from https://github.com/settings/keys. "
+  echo "For test SSH connection with your key: ssh -T git@github.com"
   cat ~/.ssh/id_ed25519.pub
 fi
 
