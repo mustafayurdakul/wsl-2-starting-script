@@ -55,7 +55,7 @@ echo ""
 echo "## [UPDATE SCRIPT MESSAGE]:	Node 16.x installing..."
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 sudo apt-get install -y nodejs
-sudo apt-get install -y gcc g++ make
+sudo apt-get install -y build-essential
 
 echo ""
 echo ""
@@ -64,7 +64,6 @@ IFS= read -r -p  "Enter your GitHub e-mail address (example@github.com): " userE
 IFS= read -r -p  "Enter your GitHub Name (Mustafa Yurdakul): " userName
 git config --global user.name "$userName"
 git config --global user.email "$userEmail"
-
 
 echo ""
 echo ""
