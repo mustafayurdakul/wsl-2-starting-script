@@ -15,6 +15,13 @@ sudo apt-get install git -y
 
 echo ""
 echo ""
+echo "## [UPDATE SCRIPT MESSAGE]:	Node 16.x installing..."
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -y build-essential
+
+echo ""
+echo ""
 echo "## [UPDATE SCRIPT MESSAGE]:	ZSH installing..."
 sudo apt-get install zsh -y
 
@@ -49,13 +56,6 @@ echo "autoload -U promptinit; promptinit" >> .zshrc
 echo "prompt pure" >> .zshrc
 echo "# End of lines configured by Pure Zsh Theme" >> .zshrc
 echo "Pure theme configuration added."
-
-echo ""
-echo ""
-echo "## [UPDATE SCRIPT MESSAGE]:	Node 16.x installing..."
-curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo apt-get install -y build-essential
 
 echo ""
 echo ""
