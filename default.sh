@@ -34,28 +34,13 @@ echo "## [UPDATE SCRIPT MESSAGE]:	Changing default shell to Zsh.."
 
 echo ""
 echo ""
-echo "## [UPDATE SCRIPT MESSAGE]:	Pure Zsh theme installing..."
-mkdir -p "$HOME/.zsh"
-[ -d "$HOME/.zsh/pure/" ] && echo "Pure already installed, removing for fresh install."
-[ -d "$HOME/.zsh/pure/" ] && sudo rm -r $HOME/.zsh/pure/
-git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-
-echo ""
-echo ""
-echo "## [UPDATE SCRIPT MESSAGE]:	Pure Zsh theme configuration executing..."
+echo "## [UPDATE SCRIPT MESSAGE]:	Zsh configuration executing..."
 echo "# Lines configured by zsh-newuser-install" > .zshrc
 echo "HISTFILE=~/.histfile" >> .zshrc
 echo "HISTSIZE=10" >> .zshrc
 echo "SAVEHIST=10" >> .zshrc
 echo "# End of lines configured by zsh-newuser-install" >> .zshrc
 echo "Hist configuration added."
-
-echo "# Lines configured by Pure Zsh Theme" >> .zshrc
-echo "fpath+=$HOME/.zsh/pure" >> .zshrc
-echo "autoload -U promptinit; promptinit" >> .zshrc
-echo "prompt pure" >> .zshrc
-echo "# End of lines configured by Pure Zsh Theme" >> .zshrc
-echo "Pure theme configuration added."
 
 echo ""
 echo ""
