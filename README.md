@@ -5,7 +5,6 @@ Bash script for update especially debian based distros and install zsh, git, nod
 - zsh & pure
 - curl
 - git
-- node 16.x
 
 ## Installing
 For execute, just copy and paste your default shell.
